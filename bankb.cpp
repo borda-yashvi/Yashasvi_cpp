@@ -2,7 +2,7 @@
 using namespace std;
 int main()
 {
-    int n,d,w,a;
+    int n,d,w,a,f=1;
    do
    {
     
@@ -19,19 +19,15 @@ int main()
           cout<<"enter withdraw =";
           cin>>w;
           break;
-          case 9:
+          case 3:
           a=d-w;
           cout<<"\n show balance ="<<a;
           break;
-          case 0:
-          cout<<"\n exit";
-          break;
-          
-         
           default:
           cout<<"wrong choice";
           break;
     }
-          n++;
-    } while(n<=10);
+    cout<<"\n do you want again ";
+    cin>>f;
+    }while(n<=10);
 }
