@@ -19,5 +19,5 @@ con(char a)
 };
 int main()
 {
-    con c1(4.1);
+    con c1('a');
 }
