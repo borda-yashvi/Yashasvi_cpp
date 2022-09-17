@@ -65,6 +65,26 @@ void delete_last(struct node **head)
     }
     
 }
+void middle_delete(struct node **head,int key)
+{
+
+    struct node *temp=*head,*prev;
+    if(temp!=NULL&&temp->data==key)
+    {
+        *head=temp->next;
+        free(temp);
+        return;
+    }
+    while(temp!=NULL&&temp->data!=key)
+    {
+        prev=temp;
+        temp=temp->next;
+    }
+    if(temp==NULL)
+    return;
+    prev->next=temp->next;
+    free(temp);
+}
 int main()
 {
     struct node *head=NULL;
